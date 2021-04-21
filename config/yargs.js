@@ -17,7 +17,7 @@ const argv = require('yargs')
         default: 10,
         describe: 'Nuestra hasta que numero se generara las tablas en consola'
     })
-    .check((argv) => {
+    .check((argv, options) => {
         if (isNaN(argv.b)) {
             throw 'La base tiene que ser un numero';
         }
